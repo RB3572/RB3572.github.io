@@ -1,5 +1,109 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ6kBZvlFym8vTCrzgGixiznN_KlLDNI7fwV8cNgPtL2dXjp34iqXeGBwYvseXm3JADbczriBGugPvu/embed?start=false&loop=false&delayms=3000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-</html> 
+  <script src="google-calendar.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover">
+  <title>Spartan Daily</title>
+  <link href = "style.css" rel="stylesheet" type= "text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Press+Start+2P">
+  <link rel="icon" href="logo.png">
+</head>
+
+<body>
+<!--Header-->
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+      <a href="index.html">
+      <div class="logo">
+        <img src="logo.png" alt="" width = "75px">
+      </div>
+    </a>
+      <nav>
+        <ul id="MenuItems">
+          <li class="sdailylogo">SPARTAN DAILY</li>
+          <li id="display-date" class = "date">
+            <script>
+              var today = new Date();
+              var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+              document.querySelector("#display-date").textContent = date;
+            </script>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+  <!--the intro-->
+  <div class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-2">
+          <div class="sdailylogo2"> CURRENT HOUSE CUP POINTS:</div>
+          <div class = "row">
+            <div class = "col-2">
+              <div class = "2container1">
+                <div class="rectangle1">
+                  <div class="filler1"></div>
+                </div>
+                <input type="range" min="0" max="1000" oninput="changeValue(this.value)">
+              </div>
+              <div class="sdailylogo2">Gold: 600</div>
+            </div>
+            <div class = "col-2">
+              <div class="rectangle1">
+                <div class="filler2"></div>
+              </div>
+              <input type="range" min="0" max="1000" oninput="changeValue(this.value)">
+              <div class="sdailylogo2">Blue: 0</div>
+            </div>
+        
+          </div>
+          <script>
+            function changeValue(value) {
+              var filler1 = document.querySelector('.filler1');
+              var filler2 = document.querySelector('.filler2');
+              filler1.style.transform = 'scaleY(' + (value / 1000) + ')';
+              filler2.style.transform = 'scaleY(' + ((1000-value) / 1000) + ')';
+            }
+          </script>
+          <br>
+          <div style="text-align: center;">
+            <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQ6kBZvlFym8vTCrzgGixiznN_KlLDNI7fwV8cNgPtL2dXjp34iqXeGBwYvseXm3JADbczriBGugPvu/embed?start=true&loop=true&delayms=3000&rm=minimal" frameborder="0" width="480" height="299" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+          </div>
+          <!--<a href="" class = "btn">Button &#8594</a>-->
+        </div>
+        <div class="col-2" id = "js-gcal-event">
+          <iframe src = "https://calendar.google.com/calendar/u/0/embed?wkst=1&bgcolor=%23ffffff&ctz=America%2FLos_Angeles&showTitle=0&showNav=0&showDate=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&showNav=0&showPrint=0&showCalendars=0&mode=DAY&src=72b0t98m3knmm257gnp35h2dklc60207%40import.calendar.google.com&ctz=America%2FLos_Angeles"frameborder="0" width="480" height="800" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <!-----footer------->
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="footer-col-1">
+        </div>
+        <div class="footer-col-2">
+          <img src="logo.png" alt="">
+          <p>Shaping the minds and the hearts of the people who will change the world.</p>
+        </div>
+        <div class="footer-col-3">
+
+        </div>
+        <div class="footer-col-3">
+        </div>
+      </div>
+      <hr>
+      <p class = "copyright">Copyright 2022 - RB3D</p>
+    </div>
+  </div>
+</body>
+</html>
