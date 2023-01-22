@@ -1,0 +1,15 @@
+{
+  "name": "spartan-daily",
+  "type": "module",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "dev": "parcel",
+    "build": "parcel build"
+  },
+  "dependencies": {
+    "parcel": "^2.8.3",
+    "dayjs": "^1.11.7",
+    "ical-js-parser": "^0.7.4"
+  }
+}
