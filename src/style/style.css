@@ -357,6 +357,15 @@ ul{
   color: #1c4587;
   font-size: 14px;
 }
+
+.lunch{
+  position: staic;
+  justify-content: left;
+  font-family: "Inter";
+  color: #3773d4;
+  font-size: 16px;
+}
+
 .single-product{
   margin-top: 80px;
 }
