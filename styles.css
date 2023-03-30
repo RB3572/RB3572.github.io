@@ -1,0 +1,134 @@
+@font-face {
+  font-family: bold;
+  src: url('fonts/bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: light;
+  src: url('fonts/light.ttf') format('truetype');
+}
+
+html, body {
+  max-height: 100%;
+  overflow-x: hidden;
+}
+img{
+  height: 100vh; 
+  width: auto
+}
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+  filter: brightness(30%);
+}
+
+ol {
+  line-height: 1;
+}
+li{
+  padding-bottom: 3vh;
+}
+.slide {
+  width: 50vw;
+  height: 100vh;
+}
+body {
+  background-color: #1b1b1b;
+}
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid rgb(189, 189, 189);
+  padding: 8px;
+  text-align: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+
+}
+.title {
+  font-family: light;
+  font-weight: bold;
+  font-size: 7.5vw;
+  text-align: center;
+  width: 100vh;
+  height: 10vw;
+  color: rgb(197, 197, 197);
+  transform-origin: top left;
+  transform: rotate(-90deg) translateX(-100vh);
+  padding: 2.5vw;
+
+}
+.bodytext {
+  font-family: light;
+  font-size: 3vh;
+  color: rgb(174, 174, 174);
+  width: 30vw;
+  height: auto;
+  text-align: left;
+  padding: 10vw;
+}
+.titleslide {
+  width: 15vw;
+}
+.autoslide {
+  width: auto;
+  display: flex;
+  align-items: center; /* vertically center the content */
+  justify-content: center; /* horizontally center the content */
+
+}
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+}
+html, body {
+  max-height: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+#arrow {
+  animation: arrowMove 1s linear infinite;
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(5px);
+  }
+  30%{
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  60%{
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
